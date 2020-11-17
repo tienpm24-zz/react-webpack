@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import TicketManagement from './app/TicketManagement';
+import { ErrorBoundary } from './packages/base/error-boundary/ErrorBoundary';
 
 ReactDOM.render(
-  <TicketManagement name='Thor Love and Thunder' />,
+  <ErrorBoundary>
+    <TicketManagement name='Thor Love and Thunder' />
+  </ErrorBoundary>,
   document.getElementById('root')
 );

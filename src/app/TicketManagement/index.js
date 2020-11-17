@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, { useState } from 'react';
 
 import imgSrc from '../../assets/webpack.svg';
 
@@ -14,6 +14,11 @@ const Wrapper = styled.div`
 `;
 
 const TicketManagement = ({ name }) => {
+  const [count, setCount] = useState(0);
+
+  if (count > 4) {
+    throw new Error('crashed');
+  }
   return (
     <Wrapper>
       <p>
@@ -21,6 +26,8 @@ const TicketManagement = ({ name }) => {
       </p>
 
       <img src={imgSrc} />
+      <h1>Count to crash app: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Count to crash App</button>
     </Wrapper>
   );
 };
