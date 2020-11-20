@@ -17,7 +17,7 @@ A React Application build with Webpack5 &amp; Babel 7 and using Error Boundary, 
 + TerserPlugin 
 + optimization (split chunks)
 
-_You can find more details in https://webpack.js.org/
+_You can find more details in https://webpack.js.org/_
 
 
 ## Error Boundary
