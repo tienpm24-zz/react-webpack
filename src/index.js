@@ -6,7 +6,7 @@ import { ErrorBoundary } from './packages/base/error-boundary/ErrorBoundary';
 
 ReactDOM.render(
   <ErrorBoundary>
-    <TicketManagement />
+    <TicketManagement name='Thor: Love and thunder' />
   </ErrorBoundary>,
   document.getElementById('root')
 );
