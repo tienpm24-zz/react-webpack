@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import React, { useState } from 'react';
+import React from 'react';
 
 import imgSrc from '../../assets/webpack.svg';
+
+import withCounter from '../../packages/base/higher-order-components/withCounter';
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,12 +15,7 @@ const Wrapper = styled.div`
   padding: 10px;
 `;
 
-const TicketManagement = ({ name }) => {
-  const [count, setCount] = useState(0);
-
-  if (count > 4) {
-    throw new Error('crashed');
-  }
+const TicketManagement = ({ name, count, incrementCount }) => {
   return (
     <Wrapper>
       <p>
@@ -26,10 +23,10 @@ const TicketManagement = ({ name }) => {
       </p>
 
       <img src={imgSrc} />
-      <h1>Count to crash app: {count}</h1>
-      <button onClick={() => setCount(count + 1)}>Count to crash App</button>
+      <h1>Count to crash app: {count} </h1>
+      <button onClick={incrementCount}>Count to crash App</button>
     </Wrapper>
   );
 };
 
-export default TicketManagement;
+export default withCounter(TicketManagement);
