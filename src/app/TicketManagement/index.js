@@ -1,9 +1,10 @@
-import styled from 'styled-components';
+import { styled } from 'adapters/styled-components';
+
 import React from 'react';
 
 import imgSrc from '../../assets/webpack.svg';
 
-import withCounter from '../../packages/base/higher-order-components/withCounter';
+import withCounter from 'base/higher-order-components/withCounter';
 
 const Wrapper = styled.div`
   display: flex;
