@@ -30,7 +30,9 @@ _You can find more details in https://webpack.js.org/_
 
 - Using Apollo client to send request to GraphQl server via queries and mutations
 - Using Context + Hooks to manage state. Passing data between components
+
   _Cause the demo backend can not update when request success, i will make the update cache after mutation to see UI has been updated_
+
   _Apollo client: https://www.apollographql.com/docs/react/_
 
 ## Setup
